@@ -1,20 +1,20 @@
 一，选择题
-	以下哪个不是python解释器
+D	以下哪个不是python解释器
 		CPython
 		IPython
 		Jython
 		py
-	下列哪个表达式在Python中是非法的？
+C	下列哪个表达式在Python中是非法的？
 		x = y = z = 1
 		x = (y = z + 1)
 		x, y = y, x
 		x += y
-	print("%d %% %d"%(3, 5)) 输出结果是？
+A	print("%d %% %d"%(3, 5)) 输出结果是？
 		3 % 5
 		3 %% 5
 		2
 		1
-	“今年第一季度GDP提高了x%”，x为float值，格式化字符串，x保留两位小数，下面哪个是正确的？
+B	“今年第一季度GDP提高了x%”，x为float值，格式化字符串，x保留两位小数，下面哪个是正确的？
 		print("今年第一季度GDP提高了%.2f"%(22.234,))
 		print("今年第一季度GDP提高了%.2f%"%(22.234,))
 		print("今年第一季度GDP提高了%.2f%%"%(22.234,))
@@ -24,27 +24,27 @@
 		["cdsa", 32, None, True]
 		["cdsa", 32, 33.2, None]
 		[32, 33.2, None, True]
-	print(15 // 2);
+B	print(15 // 2);
 		1
 		7
 		7.5
 		8
-	下面哪个不是 python 的数据类型
+D	下面哪个不是 python 的数据类型
 		int
 		str
 		set
 		double
-	*args 代表什么参数
+B	*args 代表什么参数
 		位置参数
 		可变参数
 		可变关键字参数
 		命名关键字参数
-	函数多个返回值，实际上返回的是什么数据类型？
+C	函数多个返回值，实际上返回的是什么数据类型？
 		list
 		set
 		tuple
 		dict
-	安装Django2.0.7版本，使用的什么命令？
+C	安装Django2.0.7版本，使用的什么命令？
 		pip install django
 		pip install django=2.0.7
 		pip install django==2.0.7
