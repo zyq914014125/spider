@@ -5,11 +5,11 @@ import xlwt
 from bs4 import BeautifulSoup
 import pymysql
 def change():
-    db = pymysql.connect(host='127.0.0.1', port=3306, user='root1', passwd='123456789', db='movie',
+    db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='123456789', db='mybits',
                          charset='utf8')
     cursor = db.cursor()
     try:
-        cursor.execute('select * from movie')
+        cursor.execute('select * from info')
         cursor.scroll(0, mode='absolute')
         message = cursor.fetchall()  # 查看所有数据
         fs = cursor.description
@@ -22,7 +22,7 @@ def change():
         for row in range(1, len(message) + 1):
             for col in range(0, len(fs)):
                 sheet.write(row, col, u'%s' % message[row - 1][col])
-        file.save('C:\\Users\\Administrator\\Desktop\\movie.xls')
+        file.save('C:\\Users\\Administrator\\Desktop\\info.xls')
         db.commit()
         db.close()
     except Exception as e:

@@ -1,0 +1,106 @@
+一，选择题
+	以下哪个不是python解释器
+		CPython
+		IPython
+		Jython
+		py
+	下列哪个表达式在Python中是非法的？
+		x = y = z = 1
+		x = (y = z + 1)
+		x, y = y, x
+		x += y
+	print("%d %% %d"%(3, 5)) 输出结果是？
+		3 % 5
+		3 %% 5
+		2
+		1
+	“今年第一季度GDP提高了x%”，x为float值，格式化字符串，x保留两位小数，下面哪个是正确的？
+		print("今年第一季度GDP提高了%.2f"%(22.234,))
+		print("今年第一季度GDP提高了%.2f%"%(22.234,))
+		print("今年第一季度GDP提高了%.2f%%"%(22.234,))
+		print("今年第一季度GDP提高了{0}%".format(22.234))
+	l = ["cdsa", 32, 33.2, None, True];l.pop();print(l);打印结果是：
+		["cdsa", 32, 33.2, True]
+		["cdsa", 32, None, True]
+		["cdsa", 32, 33.2, None]
+		[32, 33.2, None, True]
+	print(15 // 2);
+		1
+		7
+		7.5
+		8
+	下面哪个不是 python 的数据类型
+		int
+		str
+		set
+		double
+	*args 代表什么参数
+		位置参数
+		可变参数
+		可变关键字参数
+		命名关键字参数
+	函数多个返回值，实际上返回的是什么数据类型？
+		list
+		set
+		tuple
+		dict
+	安装Django2.0.7版本，使用的什么命令？
+		pip install django
+		pip install django=2.0.7
+		pip install django==2.0.7
+		pip install django version=2.0.7
+
+二、填空题
+	字符串前面添加u、r、b分别代表什么？
+	u表示对该字符串进行unicode编码，r用于正则表达式，b:byte
+	requests模块请求远程服务器，如何设置相应编码？
+	requests.encoding='utf-8'
+	windows下执行python的方式；
+	cmd,进命令行到python.exe路径，输入python	
+	创建python package，会自动生成什么文件？
+	 _ init.py_ _
+	python变量作用域有哪些？
+	局部，闭包函数外，全局，内建
+
+三、问答题
+	python命名规则？
+	字母下划线开头，单词之间用下划线分割
+	set删除操作中，pop、remove的区别？
+	pop是弹出指定位置，remove是删除首个符合给定规则的值
+	list使用+=和append函数的区别？
+	append，在list后面追加元素，会把append中值作为整体。
+而+=会把追加值进行拆分
+	使用bs4解析响应内容，获取某div（class为aaa）下所有span节点；
+	soup=Beautiful(html,'lxml')
+	div_list=soup.find_all(class_="aaa")
+	span_list=div_list.find_all("span")
+	简述Django操作流程、组件的作用；
+	先进入cmd，输入django-admin startproject  ****
+	管理工具：一套内置的创建站点，迁移数据，维护静态文件的命令工具
+	模型：提供数据访问接口和模块，包括数据字段。元数据，数据关系等的定义
+	视图：
+	模板：内置tags与filters定义页面的生成方式
+	表单：内置数据类型生成html表单
+	管理站：快速生成后台数据管理网站
+四、编程题
+	定义一个函数，接受 0 个或多个参数，返回累计乘积；
+def mulit(list):
+    time = 1
+    if len(list)>0 :
+      for i in list:
+	#只算int类型
+         if isinstance((i),(int)):
+            time=time*i
+      print(time)
+    else:
+        print(0)
+		
+	定义一个函数，去掉字符串前后的空格；
+  		 def trim(str):
+   			if str=="":
+       				return str
+   			elif str[0]==" ":
+       				str=str[1:]
+   			elif str[-1]==" ":
+      				 str=str[:-1]
+   			return str
